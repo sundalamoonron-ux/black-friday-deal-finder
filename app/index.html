@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealBeacon — Real Black Friday &amp; Cyber Monday Deals, Checked Today</title>
+<meta name="description" content="56 real Black Friday and Cyber Monday deals, each checked at its store on 26–27 Nov 2026, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Black Friday 2026 &middot; Cyber Monday 30 Nov</p>
+    <h1><span class="beacon" aria-hidden="true">&#9679;</span> DealBeacon</h1>
+    <p class="tagline">Real deals, checked today — not inflated “was” prices. Every price below was read at its store, or in a deals source that names the store, on 26–27 November 2026.</p>
+    <dl class="stats" id="stats">
+      <div><dt>Deals listed</dt><dd id="stat-deals">–</dd></div>
+      <div><dt>Total you could save</dt><dd id="stat-savings">–</dd></div>
+      <div><dt>New lowest prices</dt><dd id="stat-newlows">–</dd></div>
+      <div><dt>Biggest single cut</dt><dd id="stat-biggest">–</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="toolbar" aria-label="Find deals">
+    <div class="search-row">
+      <label class="search-box">
+        <span class="visually-hidden">Search deals</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M10 2a8 8 0 1 0 4.9 14.3l4.6 4.6 1.4-1.4-4.6-4.6A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z" fill="currentColor"/></svg>
+        <input id="search" type="search" placeholder="Search products, brands, stores…" autocomplete="off">
+      </label>
+      <label class="select-wrap">Sort
+        <select id="sort">
+          <option value="discount">Biggest discount first</option>
+          <option value="savings">Biggest $ saving first</option>
+          <option value="price-asc">Lowest price first</option>
+          <option value="price-desc">Highest price first</option>
+          <option value="newlow">New lows first</option>
+        </select>
+      </label>
+    </div>
+    <div class="filter-row">
+      <label class="select-wrap">Store
+        <select id="store">
+          <option value="">All stores</option>
+        </select>
+      </label>
+      <label class="select-wrap">Min. discount
+        <select id="mindiscount">
+          <option value="0">Any discount</option>
+          <option value="20">20% off or more</option>
+          <option value="30">30% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label class="select-wrap">Verdict
+        <select id="signal">
+          <option value="">All verdicts</option>
+          <option value="new-low">New low only</option>
+          <option value="strong">Strong price only</option>
+          <option value="routine">Routine saving only</option>
+        </select>
+      </label>
+      <button id="reset" type="button" class="reset-btn">Clear filters</button>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+  </section>
+
+  <section id="deals" class="grid" aria-live="polite"></section>
+
+  <p class="empty" id="empty" hidden>No deals match those filters. Try clearing the search or lowering the minimum discount.</p>
+
+  <section class="how" aria-label="How these deals were checked">
+    <h2>How we checked every deal</h2>
+    <ol>
+      <li><strong>Read the price at the store.</strong> Each price was read in a deals roundup that names the store and links to the product there — TechSpot, Redmond Pie, DealNews and SoapCentral's streaming roundup — on 26–27 November 2026.</li>
+      <li><strong>Did the maths.</strong> The discount on every card is computed from the two prices shown, so the percentage always matches.</li>
+      <li><strong>Gave an honest verdict.</strong> <span class="badge badge-new-low">New low</span> means the lowest price tracked for that product. <span class="badge badge-strong">Strong price</span> means a genuine cut on something worth buying. <span class="badge badge-routine">Routine saving</span> means a real discount, but a small one — included so you can see what is <em>not</em> a bargain.</li>
+      <li><strong>Linked to the store.</strong> “View at the store” opens the store's own search for that exact product, so you can confirm the price before you buy. Prices can change — if the store shows a different price, trust the store.</li>
+    </ol>
+    <p class="fineprint">DealBeacon is an independent roundup. It is not affiliated with Amazon, Best Buy, Dell, Apple, or any store named here. Product names and store names belong to their owners. Streaming prices are monthly; the promo rate ends on the date shown and the regular rate applies after that.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>DealBeacon — built for Black Friday &amp; Cyber Monday 2026. Prices checked 26–27 Nov 2026; they can change. Check the store page before buying.</p>
+</footer>
+</body>
+</html>
